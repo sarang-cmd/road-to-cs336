@@ -154,6 +154,10 @@ The complete roadmap with per-lecture breakdowns, specific warnings, checkpoints
 - [ ] Phase 6 — Hugging Face NLP course complete
 - [ ] Phase 7 — CS336 lectures followed
 
+## Perplexity Artifact
+
+https://www.perplexity.ai/computer/a/51e38c58-c405-5a28-931d-22259d9f3c77
+
 ***
 
 *Started: June 2026*
