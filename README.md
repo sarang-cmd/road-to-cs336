@@ -1,6 +1,6 @@
 # 🧠 Road to Stanford CS336 (DP1 Edition)
 
-A self-study roadmap for learning AI from scratch. It starts at the level of an IB Diploma Programme Year 1 student and ends at the ability to follow [Stanford CS336: Language Modeling from Scratch](https://cs336.stanford.edu), a graduate-level course on building large language models.
+A self-study roadmap for learning AI from scratch. It starts at the level of an IB Diploma Programme Year 1 student (Math AA HL, Physics HL, Chemistry HL) and ends at the ability to follow [Stanford CS336: Language Modeling from Scratch](https://cs336.stanford.edu), a graduate-level course on building large language models.
 
 **100% free. No credit cards. No free trials. No paywalls.**
 
@@ -16,11 +16,11 @@ The target, Stanford CS336, covers building a full LLM from scratch: tokenizers,
 
 ## What Changed From the MYP5 Version
 
-DP1 math already covers functions, exponentials and logarithms, trigonometry, and an introduction to calculus and statistics. So this edition:
+Math AA HL already covers functions, exponentials and logarithms, trigonometry, calculus, vectors, and probability and statistics. It does not teach matrices. So this edition:
 
-- Cuts the math phase from 6-8 weeks to about 3-5 weeks and focuses on what the DP syllabus skips (linear algebra, multivariable calculus, the chain rule applied to many variables)
-- Replaces Khan Academy probability with a quick check against your DP stats notes
-- Adds a pacing plan around DP workload
+- Cuts the math phase from 6-8 weeks to about 3-4 weeks and focuses on what Math AA HL skips (matrices and linear algebra, multivariable calculus, the chain rule applied to many variables)
+- Replaces Khan Academy probability with a quick check against your Math AA stats notes
+- Adds a pacing plan around three HL subjects
 - Adds a section on using the IB core (Extended Essay, Internal Assessments, CAS) for your AI work
 
 ---
@@ -29,7 +29,7 @@ DP1 math already covers functions, exponentials and logarithms, trigonometry, an
 
 | Phase | Content                                     | Est. Time   |
 | ----- | ------------------------------------------- | ----------- |
-| **0** | Math gaps: Linear Algebra, Multivariable Calculus | 3-5 weeks   |
+| **0** | Math gaps: Linear Algebra, Multivariable Calculus | 3-4 weeks   |
 | **1** | Python depth (CS50P + NumPy)                | 3-4 weeks   |
 | **2** | ML Foundations (Google MLCC)                | 2-3 weeks   |
 | **3** | Practical Deep Learning (fast.ai)           | 8-10 weeks  |
@@ -44,9 +44,9 @@ DP1 math already covers functions, exponentials and logarithms, trigonometry, an
 
 ## Pacing Around the DP
 
-DP2 is the heaviest year. A realistic plan:
+Three HL subjects are a heavy load, and DP2 is the heaviest year. A realistic plan:
 
-- **DP1 (now to May 2027):** Phases 0, 1, and 2. Start Phase 3 if your workload allows.
+- **DP1 (now to May 2027):** Phases 0, 1, and 2, at 3-5 hours per week. Start Phase 3 only if your workload allows.
 - **Summer 2027:** Phase 3 and the start of Phase 4. Long free blocks suit Karpathy's videos.
 - **DP2 (Sep 2027 to May 2028):** Light maintenance only. One Karpathy lecture or one coding session per week at most. Exams come first.
 - **After exams (from May 2028):** Finish Phase 4, then Phases 5, 6, and 7.
@@ -59,12 +59,12 @@ Adjust this to your own schedule. Protect your grades.
 
 > Everything in deep learning is applied linear algebra and calculus. DP1 gives you the base. This phase fills the rest.
 
-First, check what you already know:
+Math AA HL covers vectors, calculus, Maclaurin series, and probability. It does not teach matrices. Check what you already know:
 
-- 📐 **Linear Algebra** (new for most DP students): [3Blue1Brown: Essence of Linear Algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
+- 📐 **Linear Algebra** (matrices are new, vectors are familiar): [3Blue1Brown: Essence of Linear Algebra](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
 - 📈 **Calculus** (skim, you know the basics): [3Blue1Brown: Essence of Calculus](https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr)
 - 📊 **Multivariable Calculus** (partial derivatives, gradients): [Khan Academy: Multivariable Calculus](https://www.khanacademy.org/math/multivariable-calculus)
-- 🎲 **Probability & Statistics:** review your DP notes first. Use [Khan Academy: Statistics & Probability](https://www.khanacademy.org/math/statistics-probability) only for topics you do not know, such as expectation, variance, and conditional probability.
+- 🎲 **Probability & Statistics:** review your Math AA notes first. Use [Khan Academy: Statistics & Probability](https://www.khanacademy.org/math/statistics-probability) only for topics you do not know, such as expectation, variance, and conditional probability.
 - 📝 **Practice Problems:** [MIT 18.06 Linear Algebra (OCW)](https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/)
 
 **Checkpoint:** You multiply two matrices by hand, explain what a gradient is, and apply the chain rule to a function of two variables.
@@ -77,8 +77,6 @@ First, check what you already know:
 
 - 🐍 **CS50P:** [Harvard CS50's Introduction to Programming with Python](https://cs50.harvard.edu/python/)
 - 🔢 **NumPy:** [NumPy Learn](https://numpy.org/learn/)
-
-If you take IB Computer Science, you already know the basics. Skip to the later CS50P weeks and spend your time on NumPy.
 
 ---
 
@@ -159,8 +157,9 @@ Key topics: tensor operations, autograd, `nn.Module`, optimizers, DataLoaders, d
 
 Your AI learning can feed your DP requirements. Check every idea with your teacher or coordinator first. Your school and the IB set the rules.
 
-- **Extended Essay:** A Math or Computer Science topic on tokenization, gradient descent, or how attention works. Pick a narrow research question you can answer with your own experiments.
+- **Extended Essay:** The subject must be one of your own DP subjects, so a Math EE is the natural fit. Pick a narrow question on the math behind tokenization, gradient descent, or attention.
 - **Math Internal Assessment:** Explore the math behind backpropagation or gradient descent. Show your own calculations and a small worked example in code.
+- **Physics and Chemistry IAs:** Python is a strong tool for data analysis and curve fitting. Follow your school's rules on tools.
 - **CAS:** Teach a younger student basic Python or ML ideas. Share this roadmap with your school's coding club.
 - **Portfolio:** Keep your code in this repo. It shows sustained, independent work.
 
