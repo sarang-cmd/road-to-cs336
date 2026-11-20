@@ -1,4 +1,4 @@
-# Road to Stanford CS336: A Complete Free Self-Study Guide
+# Road to Stanford CS336: A Complete Free Self-Study Guide (DP1 Edition)
 *Built for Sarang | Goal: Understand Stanford CS336 — Language Modeling from Scratch*
 
 ---
@@ -6,11 +6,12 @@
 ## Table of Contents
 
 - [Overview: What You're Working Toward](#overview-what-youre-working-toward)
+- [What Changed From the MYP5 Edition](#what-changed-from-the-myp5-edition)
 - [Before You Start: Mindset and Setup](#before-you-start-mindset-and-setup)
 - [Phase 0 — Close the Math Gaps](#phase-0--close-the-math-gaps)
   - [0.1 Linear Algebra (3Blue1Brown)](#01-linear-algebra-3blue1brown)
   - [0.2 Calculus (3Blue1Brown)](#02-calculus-3blue1brown)
-  - [0.3 Probability & Statistics (Khan Academy)](#03-probability--statistics-khan-academy)
+  - [0.3 Probability & Statistics (DP notes + Khan Academy)](#03-probability--statistics-dp-notes--khan-academy)
 - [Phase 1 — Python Depth (CS50P)](#phase-1--python-depth-cs50p)
 - [Phase 2 — First Look at ML (Google MLCC)](#phase-2--first-look-at-ml-google-mlcc)
 - [Phase 3 — Practical Deep Learning (fast.ai)](#phase-3--practical-deep-learning-fastai)
@@ -19,6 +20,8 @@
 - [Phase 6 — Transformers and Tokenizers (Hugging Face NLP Course)](#phase-6--transformers-and-tokenizers-hugging-face-nlp-course)
 - [Phase 7 — Stanford CS336 Lectures](#phase-7--stanford-cs336-lectures)
 - [Realistic Timeline](#realistic-timeline)
+- [Pacing Around the DP](#pacing-around-the-dp)
+- [Using the IB Core for This Work](#using-the-ib-core-for-this-work)
 - [Common Pitfalls to Avoid](#common-pitfalls-to-avoid)
 
 ---
@@ -33,7 +36,19 @@ The course officially requires:
 - At least one prior deep learning course
 - Experience reading ML research papers
 
-You currently have MYP5 math, basic Python, and JavaScript experience. This guide maps out every step between where you are now and where CS336 starts, using only 100% free resources — no credit cards, no free trials, no paywalls.
+You are now in the IB Diploma Programme (DP1), taking Math AA HL, Physics HL, and Chemistry HL. You have solid Python from CS50x and JavaScript experience. This guide maps out every step between where you are now and where CS336 starts, using only 100% free resources — no credit cards, no free trials, no paywalls.
+
+---
+
+## What Changed From the MYP5 Edition
+
+Math AA HL already covers a lot of what the old Phase 0 taught from scratch. Over the two years it gives you functions, exponentials and logarithms, trigonometry, differentiation and integration, Maclaurin series, vectors in 3D, complex numbers, and a full probability and statistics unit. Your DP1 term may not have reached all of it yet, so check the order your teacher follows and treat the later topics as "coming soon" and not "done". Physics HL adds practical experience with vectors and rates of change. Chemistry HL does not overlap directly, but it adds to your workload. So this edition:
+
+- **Shortens Phase 0** from 6–8 weeks to about 3–4 weeks. Matrices and linear algebra stay almost in full, because Math AA does not teach matrices. Calculus becomes a skim plus a focused multivariable gap. Probability becomes a light review plus entropy.
+- **Keeps Phases 1–7** with the same resources and links.
+- **Adds a pacing plan** that works around three HL subjects and exams.
+- **Adds a section on the IB core** (Extended Essay, Internal Assessments, CAS).
+- **Updates the pitfalls list** with DP-specific advice.
 
 ---
 
@@ -47,13 +62,15 @@ You currently have MYP5 math, basic Python, and JavaScript experience. This guid
 
 **Do not rush phases.** The most common mistake is moving forward before the previous phase is solid. If something in Phase 4 doesn't make sense, the problem is almost always Phase 0 — a math gap you skipped.
 
+**Protect your DP grades first.** This roadmap is a long-term project. It is not worth a drop in your predicted grades. See [Pacing Around the DP](#pacing-around-the-dp).
+
 ---
 
 ## Phase 0 — Close the Math Gaps
 
-This is the most important phase. Everything in deep learning — every weight update, every attention score, every loss function — is applied linear algebra and calculus. Do not skip this phase or rush through it. You will regret it later.
+Everything in deep learning — every weight update, every attention score, every loss function — is applied linear algebra and calculus. DP1 gives you a strong base, so this phase fills the specific gaps instead of rebuilding the base.
 
-**Estimated time: 6–8 weeks**
+**Estimated time: 3–4 weeks**
 
 ---
 
@@ -62,6 +79,8 @@ This is the most important phase. Everything in deep learning — every weight u
 **Link:** [youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab](https://www.youtube.com/playlist?list=PLZHQObOWTQDPD3MizzM2xVFitgF8hE_ab)
 
 This is the Essence of Linear Algebra playlist by Grant Sanderson (3Blue1Brown). It is 16 videos, approximately 3–5 minutes to 20 minutes each. The visual approach is uniquely good — you will come away with intuition that people who learned through pure symbol manipulation never build.
+
+Math AA HL covers vectors, including dot products, cross products, and lines and planes in 3D. Chapters 1, 2, and 9 will feel familiar, so watch them at a faster speed. Math AA does not teach matrices, so Chapters 3, 4, 6, and 14 are new. Slow down there. Physics HL also helps, because you already use vectors for forces and fields.
 
 **What to watch and what to pay attention to:**
 
@@ -85,39 +104,39 @@ This is the Essence of Linear Algebra playlist by Grant Sanderson (3Blue1Brown).
 
 **Link:** [youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr](https://www.youtube.com/playlist?list=PLZHQObOWTQDMsr9K-rj53DwVRMYO3t5Yr)
 
-This is the Essence of Calculus playlist. It is 12 videos. You likely know basic derivatives from MYP5, but this series builds the intuition underneath the symbol-pushing — which is what you need for understanding backpropagation.
+This is the Essence of Calculus playlist. It is 12 videos. Math AA HL covers derivatives, the chain rule, and integration, so treat this series as a skim. Watch it at a faster speed and stop on the chapters below, because they build the intuition underneath the symbol-pushing — which is what you need for understanding backpropagation.
 
 **What you must deeply understand from this series:**
 
 - **Chapter 2 (The Paradox of the Derivative):** Understand instantaneous rate of change. In neural networks, a derivative tells you how much a weight affects the loss — this is the entire basis of training.
-- **Chapter 4 (Visualizing the Chain Rule):** The chain rule is the mathematical foundation of backpropagation. If you do not understand why the chain rule works, you will not understand why neural networks can be trained at all. Watch this video at least twice.
+- **Chapter 4 (Visualizing the Chain Rule):** The chain rule is the mathematical foundation of backpropagation. If you do not understand why the chain rule works, you will not understand why neural networks can be trained at all. Watch this video at least twice, even though you can already apply the rule.
 - **Chapter 8 (Derivatives of exponentials):** The function e^x appears constantly — in softmax, in activation functions, in probability. Know why its derivative is itself.
-- **Chapter 11 (Taylor Series):** Important for understanding approximations in optimization. You will see this in CS336's discussion of training dynamics.
+- **Chapter 11 (Taylor Series):** Important for understanding approximations in optimization. Math AA HL covers Maclaurin series, so skim this chapter unless your course has not reached them yet. You will see this idea in CS336's discussion of training dynamics.
 
-**What you need beyond this series that it doesn't fully cover:**
-- **Partial derivatives and gradients:** 3Blue1Brown's series is mostly single-variable. After finishing the series, watch 3Blue1Brown's standalone video "Gradient descent, how neural networks learn" ([youtube.com/watch?v=IHZwWFHWa-w](https://www.youtube.com/watch?v=IHZwWFHWa-w)) — this bridges single-variable calculus to the multi-variable gradient descent used in AI.
+**The main gap: multivariable calculus.** Math AA HL calculus is single-variable. Deep learning needs many variables at once.
+
+- **Gradient descent video:** Watch 3Blue1Brown's "Gradient descent, how neural networks learn" ([youtube.com/watch?v=IHZwWFHWa-w](https://www.youtube.com/watch?v=IHZwWFHWa-w)). It bridges single-variable calculus to the multi-variable gradient descent used in AI.
+- **Partial derivatives and gradients:** Work through the first sections of Khan Academy's Multivariable Calculus course ([khanacademy.org/math/multivariable-calculus](https://www.khanacademy.org/math/multivariable-calculus)). Cover partial derivatives, the gradient, and the multivariable chain rule. You do not need the sections on integration, surfaces, or vector fields right now.
 - **The gradient is just a vector of partial derivatives.** Internalize this. If you have a function with 1 million parameters (a small neural network), the gradient is a vector with 1 million numbers, each telling you which direction to nudge one weight to reduce the loss.
 
 **Red flag:** If you cannot explain why the chain rule works in your own words, stop and rewatch Chapter 4 before moving on.
 
 ---
 
-### 0.3 Probability & Statistics (Khan Academy)
+### 0.3 Probability & Statistics (Math AA HL notes + Khan Academy)
 
-**Link:** [khanacademy.org/math/statistics-probability](https://www.khanacademy.org/math/statistics-probability)
+**Link (only for gaps):** [khanacademy.org/math/statistics-probability/probability-library](https://www.khanacademy.org/math/statistics-probability/probability-library)
 
-**Link (probability section specifically):** [khanacademy.org/math/statistics-probability/probability-library](https://www.khanacademy.org/math/statistics-probability/probability-library)
+Math AA HL has a full probability and statistics unit, including conditional probability, Bayes' theorem, distributions, and expected value. Start with your own notes and past exercises instead of Khan Academy. If your course has not reached the unit yet, use Khan Academy for those topics. Language models are probabilistic systems — a transformer outputs a probability distribution over vocabulary tokens. If you don't understand probability, you cannot understand what a model is actually doing.
 
-This is the most "boring" phase on the surface but is critically important. Language models are probabilistic systems — a transformer outputs a probability distribution over vocabulary tokens. If you don't understand probability, you cannot understand what a model is actually doing.
-
-**Topics you must cover:**
+**Check each topic against your Math AA notes first. Use Khan Academy only for what you cannot do cold:**
 
 - **Probability basics:** Events, probability of an event, conditional probability (P(A|B) — probability of A given B). This is used constantly in language models where you compute the probability of the next word *given* all previous words.
 - **Random variables and distributions:** Discrete and continuous probability distributions. The softmax output of a language model is a discrete probability distribution over vocabulary.
-- **Expected value:** Used when discussing training objectives and reward models.
-- **The concept of entropy:** Not covered deeply on Khan Academy but you should understand intuitively that entropy measures "how uncertain" a distribution is. Search for "Shannon entropy explained simply" after finishing Khan Academy.
+- **Expected value and variance:** Used when discussing training objectives and reward models.
+- **The concept of entropy:** Not covered in Math AA and not deeply on Khan Academy, but you should understand intuitively that entropy measures "how uncertain" a distribution is. Search for "Shannon entropy explained simply" after finishing the review.
 
-**What to skip for now:** The inferential statistics section (hypothesis testing, confidence intervals) is less relevant at this stage. Come back to it later if needed.
+**What to skip for now:** Hypothesis testing and confidence intervals. They are less relevant at this stage. Come back later if needed.
 
 **Red flag:** You must be able to answer — without looking it up — "what is a conditional probability and why is P(next word | all previous words) the right way to think about language modeling?"
 
@@ -382,9 +401,11 @@ This course bridges from "I built a GPT from scratch" to "I understand the state
 
 If you have completed Phases 0–6, you are ready to follow these lectures. They are posted publicly on YouTube and are completely free to watch.
 
+The course website now shows a newer offering (Spring 2026). This guide links the Spring 2025 playlist and materials, which are still posted. Check the course website for newer videos when you reach this phase. Lecture topics and numbering may differ between years.
+
 **Estimated time: 12+ weeks to follow seriously**
 
-**Lecture overview:**
+**Lecture overview (Spring 2025):**
 
 | Lecture | Topic | What You Need from Prior Phases |
 |---|---|---|
@@ -413,7 +434,7 @@ If you have completed Phases 0–6, you are ready to follow these lectures. They
 
 | Phase | Content | Duration |
 |---|---|---|
-| 0 — Math (Linear Algebra, Calculus, Probability) | 3Blue1Brown + Khan Academy + MIT problem sets | 6–8 weeks |
+| 0 — Math gaps (Linear Algebra, Calculus skim + multivariable, Probability review) | 3Blue1Brown + Khan Academy + MIT problem sets | 3–4 weeks |
 | 1 — Python Depth | CS50P + NumPy fundamentals | 3–4 weeks |
 | 2 — ML Foundations | Google MLCC | 2–3 weeks |
 | 3 — Practical Deep Learning | fast.ai | 8–10 weeks |
@@ -422,9 +443,34 @@ If you have completed Phases 0–6, you are ready to follow these lectures. They
 | 6 — Hugging Face NLP Course | Chapters 1–7 | 4–5 weeks |
 | 7 — CS336 Lectures | Full Spring 2025 YouTube playlist | 12+ weeks |
 
-**Total: approximately 14–18 months of consistent work.**
+**Total: roughly 13–17 months of work, spread over a longer calendar because of the DP.**
 
-This is not a pessimistic estimate. It is what it takes to go from MYP5 math to genuinely understanding a graduate-level LLM course. Starting now at 16 means you could realistically reach CS336 before your 18th birthday. That is an extraordinary achievement for someone your age — treat it as a long-term project, not a sprint.
+These are estimates for a pace of about 6–8 hours per week. Your own pace will differ, and that is fine. Treat this as a long-term project, not a sprint.
+
+---
+
+## Pacing Around the DP
+
+Three HL subjects are a heavy load, and DP2 is the heaviest year, with the Extended Essay, Internal Assessments for each subject, and final exams. A realistic plan:
+
+- **DP1 (now to the end of the school year):** Phases 0, 1, and 2, at 3–5 hours per week. Start Phase 3 only if your workload allows. Skip it in exam weeks.
+- **Summer between DP1 and DP2:** Phase 3 and the start of Phase 4. Long free blocks suit Karpathy's videos.
+- **DP2 until exams:** Light maintenance only. One Karpathy lecture or one coding session per week at most. Exams come first.
+- **After exams:** Finish Phase 4, then Phases 5, 6, and 7.
+
+Adjust this to your own timetable. If a deadline is close, pause the roadmap. Nothing here expires.
+
+---
+
+## Using the IB Core for This Work
+
+Your AI learning can feed your DP requirements. Check every idea with your teacher or coordinator first. Your school and the IB set the rules, and an idea must fit the subject guide.
+
+- **Extended Essay:** The EE subject must be one of your own DP subjects. You do not take Computer Science, so a Math EE is the natural fit. Choose a narrow question on the math behind tokenization, gradient descent, or attention, and answer it with your own calculations and small experiments.
+- **Math Internal Assessment:** Explore the math behind backpropagation or gradient descent. Show your own calculations and a small worked example in code.
+- **Physics and Chemistry Internal Assessments:** Python is a strong tool for data analysis and curve fitting in your own experiments. NumPy from Phase 1 is enough to start. Follow your school's rules on tools and on what counts as your own work.
+- **CAS:** Teach a younger student basic Python or ML ideas. Share this roadmap with your school's coding club.
+- **Portfolio:** Keep your code on GitHub. It shows sustained, independent work.
 
 ---
 
@@ -436,9 +482,10 @@ This is not a pessimistic estimate. It is what it takes to go from MYP5 math to 
 
 3. **Treating fast.ai as a library course.** fast.ai is teaching you *concepts*. The `fastai` library itself is not what you are learning — you are learning deep learning. The library is just the vehicle.
 
-4. **Skipping the probability phase.** This is the most commonly skipped phase and the one that causes the most confusion in CS336. The loss function, the softmax output, RLHF — everything is probability. Don't skip it.
+4. **Assuming Math AA HL is enough.** It gives you a strong base, but it does not teach matrices or multivariable calculus. Do not skip those parts of Phase 0, because Phase 4 depends on them.
 
 5. **Expecting to do CS336's graded assignments for free.** The compute required for the actual assignments costs real money. The lectures, lecture code, and assignment specifications are all free. You can learn everything CS336 teaches without completing the assignments — but you cannot shortcut the compute cost if you want to actually run the training jobs.
 
-6. **Comparing your pace to others online.** You are 16 and doing this on top of IB coursework. Someone who posts "I completed Karpathy in 2 weeks" is either experienced already, doing it poorly, or not in school full-time. Set your own pace.
+6. **Letting this crowd out your DP work.** With three HL subjects, your grades and deadlines come first. A roadmap that costs you sleep or predicted grades is a bad trade. Use the pacing plan and slow down when school is busy.
 
+7. **Comparing your pace to others online.** You are doing this on top of IB coursework. Someone who posts "I completed Karpathy in 2 weeks" is either experienced already, doing it poorly, or not in school full-time. Set your own pace.
